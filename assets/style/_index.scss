@@ -1,0 +1,80 @@
+@import "../style/untils";
+
+@keyframes scroll {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+#index-main {
+    width: calc(100% - (2 * $gutter));
+    margin-left: $gutter;
+    position: absolute;
+    top: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h3 {
+        font-size: $font-main-title;
+    }
+
+    #atf {
+        width: 100vw;
+        height: calc(100vh - 32px);
+        background-image: url($baseUrl+"/assets/img/photo_accueil_capsule.jpg");
+        background-size: cover;
+        position: absolute;
+        top: 0px;
+        left: -$gutter;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        * {
+            z-index: 1;
+        }
+
+        // &::before {
+        //     content: "";
+        //     width: 100%;
+        //     height: 100%;
+        //     background-color: $white;
+        //     opacity: 0.35;
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        // }
+
+        h2 {
+            color: $brown;
+            font-size: $font-main-title;
+            width: 50%;
+            text-align: center;
+        }
+
+        a {
+            width: 150px;
+            height: 40px;
+            margin-top: $m-normal;
+            color: $white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            background-color: $brown;
+        }
+
+        img {
+            width: 30px;
+            position: absolute;
+            bottom: $m-normal;
+            animation: scroll 1000ms ease-in-out alternate infinite;
+        }
+    }
+}

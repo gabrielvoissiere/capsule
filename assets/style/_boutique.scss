@@ -1,0 +1,85 @@
+#boutique-main {
+    width: calc(100% - (2 * $gutter));
+    min-height: 100vh;
+    margin-left: $gutter;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    #products {
+        position: relative;
+        top: -60px;
+
+        h2 {
+            margin-bottom: 20px;
+            margin-top: 40px;
+            font-size: $font-title;
+        }
+
+        ul {
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-content: space-between;
+            gap: 40px;
+
+            &::before {
+                display: none;
+            }
+
+            li {
+                margin: 0;
+                width: 100% !important;
+                position: relative;
+
+                * {
+                    margin: 0;
+                    padding: 0;
+                }
+
+                a {
+                    width: 100%;
+                    margin: 0;
+                    padding: 0;
+
+                    &.wp-element-button {
+                        width: 200px;
+                        height: 40px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: green;
+                        color: white;
+                        font-weight: normal;
+                    }
+
+                    img {
+                        height: 330px;
+                        object-fit: cover;
+                        object-position: top;
+                    }
+
+                    h2 {
+                        font-size: $font-subtitle;
+                        margin: 10px 0 5px 0;
+                    }
+
+                    &:last-child {
+                        background-color: #006D82;
+                        color: $white;
+                        width: 180px;
+                        height: 40px;
+                        border-radius: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

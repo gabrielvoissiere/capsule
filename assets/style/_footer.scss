@@ -1,0 +1,14 @@
+@import "../style/untils";
+
+footer {
+    margin-top: 80px;
+    width: 100vw;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url($baseUrl+"/assets/img/vague.svg");
+    background-size: cover;
+    background-position: center 0;
+    color: $dark;
+}

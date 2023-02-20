@@ -1,0 +1,68 @@
+/*
+Theme Name: Capsule
+Author: Gabriel Voissiere
+Description: Theme de made in maison. Plugins: happy scss compiler, woocommerce, Jetpack (come with woocommerce), woocommerce payments (come with woocommerce), woocommerce services (come with woocommerce)
+Requires at least: WordPress 5.0
+Version: 1.0
+
+*/
+
+@import "./assets/style/untils";
+@import './assets/style/header';
+@import './assets/style/capsule';
+@import './assets/style/index';
+@import './assets/style/boutique';
+@import './assets/style/single-product';
+@import './assets/style/cart';
+@import './assets/style/concept';
+@import './assets/style/footer';
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+@font-face {
+    font-family: "DreamAvenue";
+    src: url("./assets/fonts/DreamAvenue.otf");
+}
+
+@font-face {
+    font-family: "LaBelleAurore";
+    src: url("./assets/fonts/LaBelleAurore.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    color: black;
+    font-family: "DreamAvenue";
+    font-size: $font-text;
+}
+
+body {
+    width: 100vw;
+    min-height: calc(100vh - 32px);
+    background-color: $global-background;
+}
+
+main {
+    width: calc(100vw - (2 * $gutter));
+    min-height: calc(100vh - (100px + 32px)) !important;
+    margin-left: $gutter;
+}
+
+.woocommerce-notices-wrapper {
+    position: absolute;
+    top: 42px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+
+    [class*="woocommerce-"] {
+        border: none;
+        border-radius: 10px;
+        background-color: white;
+        box-shadow: 0px 0px 10px silver;
+    }
+}

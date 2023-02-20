@@ -1,0 +1,238 @@
+#image {
+    width: 100%;
+    height: 400px;
+    background-image: url($baseUrl+"/assets/img/femme.jpg");
+    background-position: center -250px;
+    background-size: cover;
+    position: absolute;
+    top: 32px;
+    z-index: -999;
+
+    &.ban {
+        background-image: url($baseUrl+"/assets/img/vanner.jpg") !important;
+    }
+}
+
+#capsule-main {
+
+    a {
+        text-decoration: none;
+    }
+
+    #active {
+        text-decoration: underline;
+    }
+
+    .price {
+        display: none !important;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        ul {
+            padding: 0;
+            display: flex;
+            column-gap: 65px;
+
+            li {
+                list-style: none;
+            }
+        }
+    }
+
+    #content {
+        width: 100%;
+        margin-top: 282px;
+        min-height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        
+        &::before {
+            content: "LES CAPSULES";
+            height: 20px;
+            position: absolute;
+            top: -18px;
+            font-size: 40px;
+        }
+
+        #products {
+            margin-top: 100px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+            &>div {
+                width: 100%;
+            }
+
+            &::before {
+                content: "Femme";
+                height: 20px;
+                position: absolute;
+                top: -50px;
+                left: -50px;
+                transform: rotate(-20deg);
+                font-size: 50px;
+                font-family: "LaBelleAurore";
+            }
+
+            ul {
+                margin: 0;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                justify-content: space-between;
+                gap: 40px;
+    
+                &::before {
+                    display: none;
+                }
+    
+                li {
+                    margin: 0;
+                    width: 100% !important;
+                    position: relative;
+    
+                    * {
+                        margin: 0;
+                        padding: 0;
+                    }
+    
+                    a {
+                        width: 100%;
+                        margin: 0;
+                        padding: 0;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 20px;
+    
+                        &.wp-element-button {
+                            width: 200px;
+                            height: 40px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: green;
+                            color: white;
+                            font-weight: normal;
+                        }
+    
+                        img {
+                            object-fit: cover;
+                            object-position: top;
+                            width: 400px;
+                            height: 600px;
+                            border-radius: 200px;
+                        }
+    
+                        h2 {
+                            font-size: $font-subtitle;
+                            margin: 10px 0 5px 0;
+                            color: #006D82;
+                        }
+    
+                        &:last-child {
+                            display: none !important;
+                            background-color: #006D82;
+                            color: $white;
+                            width: 180px;
+                            height: 40px;
+                            border-radius: 0;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            position: absolute;
+                            right: 0;
+                            bottom: 0;
+                        }
+                    }
+                }
+            }
+
+            .product-elm {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                row-gap: 20px;
+
+                &:first-child {
+                    .img {
+                        background-image: url($baseUrl+"/assets/img/smile.png");
+                    }
+                }
+
+                &:nth-child(2) {
+                    .img {
+                        background-image: url($baseUrl+"/assets/img/photo_accueil_capsule.jpg");
+                    }
+                }
+
+                &:last-child {
+                    .img {
+                        background-image: url($baseUrl+"/assets/img/groupi.jpg");
+                    }
+                }
+
+                .img {
+                    width: 400px;
+                    height: 600px;
+                    background-size: cover;
+                    background-position: center;
+                    border-radius: 200px;
+                }
+
+                p {
+                    font-size: 25px;
+                    font-family: "LaBelleAurore";
+                    color: #006D82;
+                }
+            }
+        }
+
+        &.homme {
+
+            #products {
+                &::before {
+                    content: "Homme";
+                    height: 20px;
+                    position: absolute;
+                    top: -50px;
+                    left: -50px;
+                    transform: rotate(-20deg);
+                    font-size: 50px;
+                    font-family: "LaBelleAurore";
+                }
+    
+                .product-elm {
+    
+                    &:first-child {
+                        .img {
+                            background-image: url($baseUrl+"/assets/img/facho.jpg");
+                            background-position: center right;
+                        }
+                    }
+    
+                    &:nth-child(2) {
+                        .img {
+                            background-image: url($baseUrl+"/assets/img/man.jpg");
+                        }
+                    }
+    
+                    &:last-child {
+                        .img {
+                            background-image: url($baseUrl+"/assets/img/left.jpg");
+                            background-position: center left;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,88 @@
+@import "../style/untils";
+
+header {
+  height: 100px;
+  width: calc(100% - (2 * $gutter));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: $gutter;
+  z-index: 2;
+  position: relative;
+
+  &>a {
+    text-decoration: none;
+    font-size: 25px;
+  }
+
+  nav {
+    display: flex;
+
+    .menu-one-container,
+    .menu-shop-container {
+      ul {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+
+        li {
+          list-style-type: none;
+
+          a {
+            text-decoration: none;
+            color: black;
+
+            img {
+              width: 20px;
+              height: 20px;
+            }
+          }
+        }
+      }
+    }
+
+    .menu-one-container {
+      ul {
+
+        li {
+
+          &.current-menu-item {
+            a {
+              color: black;
+              position: relative;
+
+              &:after {
+                content: "";
+                height: 2px;
+                width: 80%;
+                background-color: black;
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.boutique {
+      ul li.current-menu-item {
+        a {
+          position: relative;
+          color: black;
+
+          &:after {
+            content: "";
+            height: 2px;
+            width: 80%;
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}

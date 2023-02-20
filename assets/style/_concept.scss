@@ -1,0 +1,52 @@
+#concept-main {
+    width: calc(100% - (2 * $gutter));
+    min-height: 100vh;
+    margin-left: $gutter;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .block {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 70%;
+        margin-top: 100px;
+
+        &:nth-child(even) {
+            flex-direction: row-reverse;
+
+            * {
+                text-align: right;
+            }
+
+            p {
+                margin: 0;
+                margin-right: 20px;
+            }
+        }
+
+        img {
+            width: 400px;
+            height: 500px;
+            border-radius: 200px;
+            object-fit: cover;
+        }
+
+        .text {
+            margin-top: 50px;
+            width: 600px;
+
+            h2 {
+                text-transform: uppercase;
+                margin-bottom: 10px;
+                font-weight: bold;
+            }
+    
+            p {
+                margin-left: 20px;
+            }
+        }
+    }
+}
